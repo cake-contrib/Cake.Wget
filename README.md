@@ -7,7 +7,11 @@ Cake.Wget is a cross-platform add-in for [Cake](http://cakebuild.net/) which enc
 Build server | Platform | Build status
 --- | --- | ---
 Travis CI | Ubuntu | [![Build Status](https://travis-ci.org/deqenq/Cake.Wget.svg?branch=master)](https://travis-ci.org/deqenq/Cake.Wget)
+AppVeyor | Windows | [![Build status](https://ci.appveyor.com/api/projects/status/t7jfg44h5dlua7bc/branch/master?svg=true)](https://ci.appveyor.com/project/deqenq/cake-wget/branch/master)
 
+Test Coverage |
+--- |
+[![Coverage Status](https://coveralls.io/repos/github/deqenq/Cake.Wget/badge.svg?branch=master)](https://coveralls.io/github/deqenq/Cake.Wget?branch=master)
 
 ## Prerequisites
 

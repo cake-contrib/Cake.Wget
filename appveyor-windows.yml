@@ -1,0 +1,7 @@
+version: 1.0.{build}
+image: Visual Studio 2017
+environment:
+  CoverallsRepoToken:
+    secure: hzOa3kYkpJ+1z7u/wTVVm2A2TVAfCviwFxK04wT8SUrfFtBzTLMDvptKtdL8XrCT
+build_script:
+- ps: ./build.ps1 -Target Coverage-Report
