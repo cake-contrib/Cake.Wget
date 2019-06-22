@@ -1,0 +1,10 @@
+.vs*/
+.idea/
+bin/
+obj/
+tools/
+dist/
+CoverageResults/
+TestsOutput/
+*.user
+project.lock.json

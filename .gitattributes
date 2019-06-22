@@ -1,0 +1,5 @@
+* text=auto
+*.ps1 eol=lf
+*.sh eol=lf
+*.cs  diff=csharp
+tools/packages.config text eol=lf
