@@ -15,7 +15,6 @@
     <PackageTags>Cake;Script;Build;Wget</PackageTags>
     <PackageIconUrl>https://cdn.jsdelivr.net/gh/cake-contrib/graphics/png/cake-contrib-medium.png</PackageIconUrl>
     <PackageProjectUrl>https://github.com/deqenq/Cake.Wget</PackageProjectUrl>
-    <PackageLicenseUrl>https://github.com/deqenq/Cake.Wget/blob/master/LICENSE</PackageLicenseUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/deqenq/Cake.Wget.git</RepositoryUrl>
