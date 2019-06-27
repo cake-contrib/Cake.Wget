@@ -8,12 +8,12 @@ Cake.Wget is a cross-platform add-in for [Cake](http://cakebuild.net/) which enc
 
 Build server | Platform | Build status
 --- | --- | ---
-Travis CI | Ubuntu | [![Build Status](https://travis-ci.org/deqenq/Cake.Wget.svg?branch=master)](https://travis-ci.org/deqenq/Cake.Wget)
-AppVeyor | Windows | [![Build status](https://ci.appveyor.com/api/projects/status/t7jfg44h5dlua7bc/branch/master?svg=true)](https://ci.appveyor.com/project/deqenq/cake-wget/branch/master)
+Travis CI | Ubuntu | [![Build Status](https://travis-ci.org/cake-contrib/Cake.Wget.svg?branch=master)](https://travis-ci.org/cake-contrib/Cake.Wget)
+AppVeyor | Windows | [![AppVeyor branch](https://img.shields.io/appveyor/ci/cakecontrib/cake-wget/master.svg)](https://ci.appveyor.com/project/cakecontrib/cake-wget)
 
 Test Coverage |
 --- |
-[![Coverage Status](https://coveralls.io/repos/github/deqenq/Cake.Wget/badge.svg?branch=master)](https://coveralls.io/github/deqenq/Cake.Wget?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/cake-contrib/Cake.Wget/badge.svg?branch=master)](https://coveralls.io/github/cake-contrib/Cake.Wget?branch=master) |
 
 ## Prerequisites
 
@@ -118,7 +118,7 @@ Wget(settings);
 
 ## License
 
-[MIT License](https://github.com/deqenq/Cake.Wget/blob/master/LICENSE) &copy; deqenq
+[MIT License](https://github.com/cake-contrib/Cake.Wget/blob/master/LICENSE) &copy; deqenq
 
 ## Addendum
 
