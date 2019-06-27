@@ -2,6 +2,8 @@
 
 Cake.Wget is a cross-platform add-in for [Cake](http://cakebuild.net/) which encapsulates downloading files via [Wget](https://www.gnu.org/software/wget/) tool. Cake.Wget targets the [.NET Standard 2.0](https://docs.microsoft.com/en-us/dotnet/standard/net-standard) which means that will run on Windows, Linux and macOS.
 
+![Nuget](https://img.shields.io/nuget/v/Cake.Wget.svg)
+
 ## Continuous integration
 
 Build server | Platform | Build status
