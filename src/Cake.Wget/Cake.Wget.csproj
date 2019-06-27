@@ -14,10 +14,10 @@
     <PackageId>Cake.Wget</PackageId>
     <PackageTags>Cake;Script;Build;Wget</PackageTags>
     <PackageIconUrl>https://cdn.jsdelivr.net/gh/cake-contrib/graphics/png/cake-contrib-medium.png</PackageIconUrl>
-    <PackageProjectUrl>https://github.com/deqenq/Cake.Wget</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/cake-contrib/Cake.Wget</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>https://github.com/deqenq/Cake.Wget.git</RepositoryUrl>
+    <RepositoryUrl>https://github.com/cake-contrib/Cake.Wget.git</RepositoryUrl>
   </PropertyGroup>
 
   <PropertyGroup>
