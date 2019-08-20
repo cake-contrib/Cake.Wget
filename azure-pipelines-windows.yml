@@ -1,6 +1,14 @@
 trigger:
 - master
 
+schedules:
+- cron: "0 3 * * 0"
+  displayName: Weekly Sunday build
+  branches:
+    include:
+    - master
+  always: true
+
 variables:
   sdk_version: 2.1.603
 
