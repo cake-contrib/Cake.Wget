@@ -1,6 +1,6 @@
 #tool nuget:?package=coveralls.io&version=1.4.2
 
-#addin nuget:?package=Cake.Coveralls&version=0.10.0
+#addin nuget:?package=Cake.Coveralls&version=1.0.0
 
 var target = Argument("target", "Default");
 var configuration = Argument("configuration", "Release");
@@ -52,8 +52,8 @@ Task("Test")
     var settings = new DotNetCoreTestSettings
     {
         Configuration = configuration,
-        Framework = "netcoreapp2.1",
-        Logger = "trx",
+        Framework = "netcoreapp5.0",
+        Loggers = new List<string>() {"trx"},
         VSTestReportPath = testReport.FullPath,
     };
 

@@ -33,7 +33,7 @@ Cake.Wget is wrapper for command line [Wget](https://www.gnu.org/software/wget/)
 You can also specify version which should be used:
 
 ```csharp
-#addin nuget:?package=Cake.Wget&version=1.0.0
+#addin nuget:?package=Cake.Wget&version=1.1.0
 ```
 
 Command line switches are passed to the tool by `WgetSettings` object properties. Most `WgetSettings` properties names can be derived from Wget command line switches (long version) and vice versa. For example command line switch `--input-file` is translated to `WgetSettings` property name `InputFile`.
