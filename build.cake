@@ -52,7 +52,7 @@ Task("Test")
     var settings = new DotNetCoreTestSettings
     {
         Configuration = configuration,
-        Framework = "netcoreapp2.1",
+        Framework = "netcoreapp5.0",
         Loggers = new List<string>() {"trx"},
         VSTestReportPath = testReport.FullPath,
     };
