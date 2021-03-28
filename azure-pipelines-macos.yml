@@ -2,12 +2,12 @@ trigger:
 - master
 
 variables:
-  sdk_version: 2.1.603
+  sdk_version: 5.0.200
 
 jobs:
 - job: macOS
   pool:
-    vmImage: 'macOS-10.14'
+    vmImage: 'macOS-10.15'
   steps:
   - task: UseDotNet@2
     displayName: 'Use .NET Core sdk'

@@ -2,7 +2,7 @@ trigger:
 - master
 
 variables:
-  sdk_version: 2.1.603
+  sdk_version: 5.0.200
 
 jobs:
 - job: Windows
