@@ -8,7 +8,6 @@ Cake.Wget is a cross-platform add-in for [Cake](http://cakebuild.net/) which enc
 
 Build server | Platform | Build status
 --- | --- | ---
-Travis CI | Ubuntu | [![Build Status](https://travis-ci.org/cake-contrib/Cake.Wget.svg?branch=master)](https://travis-ci.org/cake-contrib/Cake.Wget)
 AppVeyor | Windows | [![AppVeyor branch](https://img.shields.io/appveyor/ci/cakecontrib/cake-wget/master.svg)](https://ci.appveyor.com/project/cakecontrib/cake-wget)
 Azure Pipelines | Windows | [![Build Status](https://dev.azure.com/cake-contrib/Cake.Wget/_apis/build/status/cake-contrib.Cake.Wget%20-%20Windows?branchName=master)](https://dev.azure.com/cake-contrib/Cake.Wget/_build/latest?definitionId=20&branchName=master)
 Azure Pipelines | Ubuntu | [![Build Status](https://dev.azure.com/cake-contrib/Cake.Wget/_apis/build/status/cake-contrib.Cake.Wget%20-%20Ubuntu?branchName=master)](https://dev.azure.com/cake-contrib/Cake.Wget/_build/latest?definitionId=21&branchName=master)
