@@ -5,7 +5,7 @@ branches:
 install: true
 mono: 
   - latest
-dotnet: 5.0.200
+dotnet: 5.0.401
 dist: xenial
 sudo: required
 script:
