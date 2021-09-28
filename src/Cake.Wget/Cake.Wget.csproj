@@ -31,7 +31,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Cake.Core" Version="1.0.0">
+    <PackageReference Include="Cake.Core" Version="1.2.0">
       <PrivateAssets>All</PrivateAssets>
     </PackageReference>
     <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
@@ -47,6 +47,6 @@
 
   <ItemGroup>
     <AdditionalFiles Include="../stylecop.json" Link="stylecop.json" />
-    <None Include="images/cake-contrib-addin-medium.png" Pack="true" PackagePath=""/>
+    <None Include="images/cake-contrib-addin-medium.png" Pack="true" PackagePath="" />
   </ItemGroup>
 </Project>
