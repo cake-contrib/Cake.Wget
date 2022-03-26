@@ -2,12 +2,12 @@ trigger:
 - master
 
 variables:
-  sdk_version: 5.0.401
+  sdk_version: 6.0.201
 
 jobs:
 - job: Windows
   pool:
-    vmImage: 'windows-2019'
+    vmImage: 'windows-2022'
   steps:
   - task: UseDotNet@2
     displayName: 'Use .NET Core sdk'
