@@ -15,7 +15,8 @@ jobs:
       packageType: sdk
       version: $(sdk_version)
       installationPath: $(Agent.ToolsDirectory)/dotnet
-  - powershell: .\build.ps1
+  - powershell: dotnet tool restore
+  - powershell: dotnet cake
     env:
       COREHOST_TRACE: 0
       DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
