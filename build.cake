@@ -1,6 +1,6 @@
 #tool nuget:?package=coveralls.io&version=1.4.2
 
-#addin nuget:?package=Cake.Coveralls&version=1.0.0
+#addin nuget:?package=Cake.Coveralls&version=1.1.0
 
 var target = Argument("target", "Default");
 var configuration = Argument("configuration", "Release");
@@ -27,7 +27,7 @@ Task("Clean")
 Task("Restore-Packages")
 .Does(() =>
 {
-    DotNetCoreRestore(solutionFile.FullPath);
+    DotNetRestore(solutionFile.FullPath);
 });
 
 Task("Build")
@@ -38,7 +38,7 @@ Task("Build")
     var settings = new DotNetCoreBuildSettings
     {
         Configuration = configuration,
-        Framework = "netstandard2.0",
+        Framework = "net6.0",
     };
 
     DotNetCoreBuild(projectFile.FullPath, settings);
@@ -52,7 +52,7 @@ Task("Test")
     var settings = new DotNetCoreTestSettings
     {
         Configuration = configuration,
-        Framework = "netcoreapp5.0",
+        Framework = "net6.0",
         Loggers = new List<string>() {"trx"},
         VSTestReportPath = testReport.FullPath,
     };
@@ -63,7 +63,7 @@ Task("Test")
         .Append("/p:CoverletOutputFormat=opencover")
         .Append("/p:Exclude=[xunit.*]*");
 
-    DotNetCoreTest(testProjectFile.FullPath, settings);
+    DotNetTest(testProjectFile.FullPath, settings);
 });
 
 Task("Package")
