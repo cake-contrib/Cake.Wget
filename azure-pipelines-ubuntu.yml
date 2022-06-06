@@ -2,7 +2,7 @@ trigger:
 - master
 
 variables:
-  sdk_version: 6.0.202
+  sdk_version: 6.0.300
 
 jobs:
 - job: Linux
