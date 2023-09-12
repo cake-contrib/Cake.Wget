@@ -35,13 +35,13 @@ Task("Build")
 .IsDependentOn("Restore-Packages")
 .Does(() =>
 {
-    var settings = new DotNetCoreBuildSettings
+    var settings = new DotNetBuildSettings
     {
         Configuration = configuration,
-        Framework = "net6.0",
+        Framework = "net7.0",
     };
 
-    DotNetCoreBuild(projectFile.FullPath, settings);
+    DotNetBuild(projectFile.FullPath, settings);
 });
 
 Task("Test")
@@ -49,15 +49,15 @@ Task("Test")
 .IsDependentOn("Restore-Packages")
 .Does(() =>
 {
-    var settings = new DotNetCoreTestSettings
+    var settings = new DotNetTestSettings
     {
         Configuration = configuration,
-        Framework = "net6.0",
+        Framework = "net7.0",
         Loggers = new List<string>() {"trx"},
         VSTestReportPath = testReport.FullPath,
     };
 
-    settings.ArgumentCustomization = 
+    settings.ArgumentCustomization =
         args => args.Append("/p:CollectCoverage=true")
         .Append($"/p:CoverletOutput=../../{coverageReport}")
         .Append("/p:CoverletOutputFormat=opencover")
@@ -70,19 +70,19 @@ Task("Package")
 .IsDependentOn("Test")
 .Does(() =>
 {
-    var settings = new DotNetCorePackSettings
+    var settings = new DotNetPackSettings
     {
         OutputDirectory = packageOutputDirectory,
         Configuration = configuration,
     };
-    
-    DotNetCorePack(projectFile.FullPath, settings);
+
+    DotNetPack(projectFile.FullPath, settings);
 });
 
 Task("Coverage-Report")
     .IsDependentOn("Test")
     .WithCriteria(BuildSystem.IsRunningOnAppVeyor)
-    .WithCriteria(() => FileExists(coverageReport.FullPath))
+    //.WithCriteria(() => FileExists(coverageReport.FullPath))
     .Does(() =>
 {
     var settings = new CoverallsIoSettings

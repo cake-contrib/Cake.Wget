@@ -2,12 +2,12 @@ trigger:
 - master
 
 variables:
-  sdk_version: 6.0.400
+  sdk_version: 7.0.400
 
 jobs:
 - job: macOS
   pool:
-    vmImage: 'macOS-11'
+    vmImage: 'macOS-13'
   steps:
   - task: UseDotNet@2
     displayName: 'Use .NET Core sdk'
@@ -24,7 +24,7 @@ jobs:
   - task: PublishTestResults@2
     inputs:
       testResultsFormat: 'VSTest' # JUnit, NUnit, VSTest, xUnit, cTest
-      testResultsFiles: '**/*.trx' 
+      testResultsFiles: '**/*.trx'
       #searchFolder: '$(System.DefaultWorkingDirectory)' # Optional
       #mergeTestResults: false # Optional
       failTaskOnFailedTests: true # Optional
