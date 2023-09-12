@@ -12,7 +12,7 @@ readonly FilePath testProjectFile = "src/Cake.Wget.Tests/Cake.Wget.Tests.csproj"
 readonly FilePath testReportDirectory = "TestsOutput";
 readonly FilePath testReport = $"{testReportDirectory}/report.trx";
 readonly FilePath coverageReportDirectory = "CoverageResults";
-readonly FilePath coverageReport = $"{coverageReportDirectory}/coverage.xml";
+readonly FilePath coverageReport = $"{coverageReportDirectory}/coverage.net7.0.xml";
 
 Task("Clean")
 .Does(() =>
@@ -57,7 +57,7 @@ Task("Test")
         VSTestReportPath = testReport.FullPath,
     };
 
-    settings.ArgumentCustomization = 
+    settings.ArgumentCustomization =
         args => args.Append("/p:CollectCoverage=true")
         .Append($"/p:CoverletOutput=../../{coverageReport}")
         .Append("/p:CoverletOutputFormat=opencover")
@@ -75,7 +75,7 @@ Task("Package")
         OutputDirectory = packageOutputDirectory,
         Configuration = configuration,
     };
-    
+
     DotNetPack(projectFile.FullPath, settings);
 });
 

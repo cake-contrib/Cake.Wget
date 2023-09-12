@@ -1,6 +1,7 @@
 version: 1.2.0.{build}
 image: Visual Studio 2022
 environment:
+  Configuration: Release
   CoverallsRepoToken:
     secure: ejW6wWM/UFiJrab/vcmLNmkgUU+nb3R4uPC3yLgEoQ5+74P+WZ2o+K0Vf+LShFSQ
 install:
@@ -10,6 +11,6 @@ install:
     ./dotnet-install.ps1 -JSonFile global.json -InstallDir 'C:\Program Files\dotnet'
 build_script:
 - ps: >-
-    dotnet tool restore
-
-    dotnet cake --Target="Coverage-Report"
+    dotnet tool restore 
+    
+    dotnet cake --Target="Coverage-Report" --Configuration="$env:Configuration"
