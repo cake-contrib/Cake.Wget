@@ -3,10 +3,10 @@ branches:
   only:
   - master
 install: true
-mono: 
+mono:
   - latest
-dotnet: 6.0.400
-dist: xenial
+dotnet: 7.0.400
+dist: jammy
 sudo: required
 script:
   - ./build.sh
