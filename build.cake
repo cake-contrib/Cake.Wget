@@ -12,7 +12,7 @@ readonly FilePath testProjectFile = "src/Cake.Wget.Tests/Cake.Wget.Tests.csproj"
 readonly FilePath testReportDirectory = "TestsOutput";
 readonly FilePath testReport = $"{testReportDirectory}/report.trx";
 readonly FilePath coverageReportDirectory = "CoverageResults";
-readonly FilePath coverageReport = $"{coverageReportDirectory}/coverage.net7.0.xml";
+readonly FilePath coverageReport = $"{coverageReportDirectory}/coverage.xml";
 
 Task("Clean")
 .Does(() =>
@@ -82,7 +82,7 @@ Task("Package")
 Task("Coverage-Report")
     .IsDependentOn("Test")
     .WithCriteria(BuildSystem.IsRunningOnAppVeyor)
-    .WithCriteria(() => FileExists(coverageReport.FullPath))
+    //.WithCriteria(() => FileExists(coverageReport.FullPath))
     .Does(() =>
 {
     var settings = new CoverallsIoSettings

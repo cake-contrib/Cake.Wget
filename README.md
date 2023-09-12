@@ -6,16 +6,16 @@ Cake.Wget is a cross-platform add-in for [Cake](http://cakebuild.net/) which enc
 
 ## Continuous integration
 
-Build server | Platform | Build status
---- | --- | ---
-AppVeyor | Windows | [![AppVeyor branch](https://img.shields.io/appveyor/ci/cakecontrib/cake-wget/master.svg)](https://ci.appveyor.com/project/cakecontrib/cake-wget)
-Azure Pipelines | Windows | [![Build Status](https://dev.azure.com/cake-contrib/Cake.Wget/_apis/build/status/cake-contrib.Cake.Wget%20-%20Windows?branchName=master)](https://dev.azure.com/cake-contrib/Cake.Wget/_build/latest?definitionId=20&branchName=master)
-Azure Pipelines | Ubuntu | [![Build Status](https://dev.azure.com/cake-contrib/Cake.Wget/_apis/build/status/cake-contrib.Cake.Wget%20-%20Ubuntu?branchName=master)](https://dev.azure.com/cake-contrib/Cake.Wget/_build/latest?definitionId=21&branchName=master)
-Azure Pipelines | macOS | [![Build Status](https://dev.azure.com/cake-contrib/Cake.Wget/_apis/build/status/cake-contrib.Cake.Wget%20-%20macOS?branchName=master)](https://dev.azure.com/cake-contrib/Cake.Wget/_build/latest?definitionId=22&branchName=master)
+| Build server    | Platform | Build status                                                                                                                                                                                                                            |
+|-----------------|----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| AppVeyor        | Windows  | [![AppVeyor branch](https://img.shields.io/appveyor/ci/cakecontrib/cake-wget/master.svg)](https://ci.appveyor.com/project/cakecontrib/cake-wget)                                                                                        |
+| Azure Pipelines | Windows  | [![Build Status](https://dev.azure.com/cake-contrib/Cake.Wget/_apis/build/status/cake-contrib.Cake.Wget%20-%20Windows?branchName=master)](https://dev.azure.com/cake-contrib/Cake.Wget/_build/latest?definitionId=20&branchName=master) |
+| Azure Pipelines | Ubuntu   | [![Build Status](https://dev.azure.com/cake-contrib/Cake.Wget/_apis/build/status/cake-contrib.Cake.Wget%20-%20Ubuntu?branchName=master)](https://dev.azure.com/cake-contrib/Cake.Wget/_build/latest?definitionId=21&branchName=master)  |
+| Azure Pipelines | macOS    | [![Build Status](https://dev.azure.com/cake-contrib/Cake.Wget/_apis/build/status/cake-contrib.Cake.Wget%20-%20macOS?branchName=master)](https://dev.azure.com/cake-contrib/Cake.Wget/_build/latest?definitionId=22&branchName=master)   |
 
-Test Coverage |
---- |
-[![Coverage Status](https://coveralls.io/repos/github/cake-contrib/Cake.Wget/badge.svg?branch=master)](https://coveralls.io/github/cake-contrib/Cake.Wget?branch=master) |
+| Test Coverage                                                                                                                                                             |
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [![Coverage Status](https://coveralls.io/repos/github/cake-contrib/Cake.Wget/badge.svg?branch=master)](https://coveralls.io/github/cake-contrib/Cake.Wget?branch=master) |
 
 ## Prerequisites
 
