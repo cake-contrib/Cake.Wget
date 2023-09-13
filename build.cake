@@ -13,6 +13,7 @@ readonly FilePath testReportDirectory = "TestsOutput";
 readonly FilePath testReport = $"{testReportDirectory}/report.trx";
 readonly FilePath coverageReportDirectory = "CoverageResults";
 readonly FilePath coverageReport = $"{coverageReportDirectory}/coverage.xml";
+readonly string framework = "net7.0";
 
 Task("Clean")
 .Does(() =>
@@ -38,7 +39,7 @@ Task("Build")
     var settings = new DotNetBuildSettings
     {
         Configuration = configuration,
-        Framework = "net7.0",
+        Framework = framework,
     };
 
     DotNetBuild(projectFile.FullPath, settings);
@@ -52,7 +53,7 @@ Task("Test")
     var settings = new DotNetTestSettings
     {
         Configuration = configuration,
-        Framework = "net7.0",
+        Framework = framework,
         Loggers = new List<string>() {"trx"},
         VSTestReportPath = testReport.FullPath,
     };
@@ -82,9 +83,10 @@ Task("Package")
 Task("Coverage-Report")
     .IsDependentOn("Test")
     .WithCriteria(BuildSystem.IsRunningOnAppVeyor)
-    //.WithCriteria(() => FileExists(coverageReport.FullPath))
+    .WithCriteria(() => GetFiles($"{coverageReportDirectory.FullPath}/*.xml").Count == 1)
     .Does(() =>
 {
+    var file = GetFiles($"{coverageReportDirectory.FullPath}/*.xml").First();
     var settings = new CoverallsIoSettings
     {
         RepoToken = EnvironmentVariable("CoverallsRepoToken"),
