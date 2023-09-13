@@ -87,12 +87,13 @@ Task("Coverage-Report")
     .Does(() =>
 {
     var file = GetFiles($"{coverageReportDirectory.FullPath}/*.xml").First();
+    Information($"Coverage report file found: '{file.FullPath}'");
     var settings = new CoverallsIoSettings
     {
         RepoToken = EnvironmentVariable("CoverallsRepoToken"),
     };
 
-    CoverallsIo(coverageReport, settings);
+    CoverallsIo(file.FullPath, settings);
 });
 
 Task("Default")
