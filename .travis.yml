@@ -5,7 +5,7 @@ branches:
 install: true
 mono:
   - latest
-dotnet: 7.0.400
+dotnet: 7.0.401
 dist: jammy
 sudo: required
 script:
