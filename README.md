@@ -13,10 +13,6 @@ Cake.Wget is a cross-platform add-in for [Cake](http://cakebuild.net/) which enc
 | Azure Pipelines | Ubuntu   | [![Build Status](https://dev.azure.com/cake-contrib/Cake.Wget/_apis/build/status/cake-contrib.Cake.Wget%20-%20Ubuntu?branchName=master)](https://dev.azure.com/cake-contrib/Cake.Wget/_build/latest?definitionId=21&branchName=master)  |
 | Azure Pipelines | macOS    | [![Build Status](https://dev.azure.com/cake-contrib/Cake.Wget/_apis/build/status/cake-contrib.Cake.Wget%20-%20macOS?branchName=master)](https://dev.azure.com/cake-contrib/Cake.Wget/_build/latest?definitionId=22&branchName=master)   |
 
-| Test Coverage                                                                                                                                                             |
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [![Coverage Status](https://coveralls.io/repos/github/cake-contrib/Cake.Wget/badge.svg?branch=master)](https://coveralls.io/github/cake-contrib/Cake.Wget?branch=master) |
-
 ## Prerequisites
 
 You will need to have a copy of the [Wget executable for your OS](https://www.gnu.org/software/wget/faq.html#download). Put location of Wget executable in your `PATH` environment variable and [Cake will find it](http://cakebuild.net/docs/tools/tool-resolution).

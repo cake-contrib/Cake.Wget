@@ -1,7 +1,3 @@
-#tool nuget:?package=coveralls.io&version=1.4.2
-
-#addin nuget:?package=Cake.Coveralls&version=1.1.0
-
 var target = Argument("target", "Default");
 var configuration = Argument("configuration", "Release");
 var packageOutputDirectory = Argument("packageOutputDirectory", "dist");
@@ -78,22 +74,6 @@ Task("Package")
     };
 
     DotNetPack(projectFile.FullPath, settings);
-});
-
-Task("Coverage-Report")
-    .IsDependentOn("Test")
-    .WithCriteria(BuildSystem.IsRunningOnAppVeyor)
-    .WithCriteria(() => GetFiles($"{coverageReportDirectory.FullPath}/*.xml").Count == 1)
-    .Does(() =>
-{
-    var file = GetFiles($"{coverageReportDirectory.FullPath}/*.xml").First();
-    Information($"Coverage report file found: '{file.FullPath}'");
-    var settings = new CoverallsIoSettings
-    {
-        RepoToken = EnvironmentVariable("CoverallsRepoToken"),
-    };
-
-    CoverallsIo(file.FullPath, settings);
 });
 
 Task("Default")
