@@ -1,8 +1,5 @@
 version: 1.2.0.{build}
 image: Visual Studio 2022
-environment:
-  CoverallsRepoToken:
-    secure: HE6QwordAOnYOUVDO3t7Vkyq8cUFVqnSfCbOan09z6TeQyYt1PsiR7iTUewDT+k0
 install:
 - ps: >-
     Invoke-WebRequest 'https://dot.net/v1/dotnet-install.ps1' -OutFile './dotnet-install.ps1'
@@ -12,4 +9,4 @@ build_script:
 - ps: >-
     dotnet tool restore
 
-    dotnet cake --Target="Coverage-Report"
+    dotnet cake
