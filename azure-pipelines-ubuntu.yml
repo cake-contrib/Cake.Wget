@@ -1,9 +1,6 @@
 trigger:
 - master
 
-variables:
-  sdk_version: 8.0.100
-
 jobs:
 - job: Linux
   pool:
@@ -13,7 +10,7 @@ jobs:
     displayName: 'Use .NET Core sdk'
     inputs:
       packageType: sdk
-      version: $(sdk_version)
+      useGlobalJson: true
       installationPath: $(Agent.ToolsDirectory)/dotnet
   - bash: dotnet tool restore
   - bash: dotnet cake
