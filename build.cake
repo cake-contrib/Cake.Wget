@@ -9,7 +9,7 @@ readonly FilePath testReportDirectory = "TestsOutput";
 readonly FilePath testReport = $"{testReportDirectory}/report.trx";
 readonly FilePath coverageReportDirectory = "CoverageResults";
 readonly FilePath coverageReport = $"{coverageReportDirectory}/coverage.xml";
-readonly string framework = "net8.0";
+readonly string framework = "net9.0";
 
 Task("Clean")
 .Does(() =>
