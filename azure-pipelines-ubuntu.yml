@@ -4,7 +4,7 @@ trigger:
 jobs:
 - job: Linux
   pool:
-    vmImage: 'ubuntu-22.04'
+    vmImage: 'ubuntu-24.04'
   steps:
   - task: UseDotNet@2
     displayName: 'Use .NET Core sdk'
