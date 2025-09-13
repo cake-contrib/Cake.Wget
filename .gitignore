@@ -8,3 +8,4 @@ CoverageResults/
 TestsOutput/
 *.user
 project.lock.json
+*.DS_Store
