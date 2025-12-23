@@ -4,7 +4,7 @@ trigger:
 jobs:
 - job: macOS
   pool:
-    vmImage: 'macOS-14'
+    vmImage: 'macOS-15'
   steps:
   - task: UseDotNet@2
     displayName: 'Use .NET Core sdk'
