@@ -15,7 +15,10 @@
     <PackageReference Include="XUnit" />
     <PackageReference Include="XUnit.runner.visualstudio" />
     <PackageReference Include="StyleCop.Analyzers" />
-    <PackageReference Include="coverlet.msbuild" />
+    <PackageReference Include="coverlet.msbuild">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
   <ItemGroup>
